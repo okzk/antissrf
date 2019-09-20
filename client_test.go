@@ -18,6 +18,7 @@ func TestClient(t *testing.T) {
 		{"10.11.12.13", errorPrivateAddress},
 		{"172.20.10.10", errorPrivateAddress},
 		{"192.168.10.10", errorPrivateAddress},
+		{"[fd90:6875:349e:1::20]", errorUniqueLocalAddress},
 		{"169.254.169.254", errorIsNotGlobalUnicastAddress},
 		{"localhost", errorIsNotGlobalUnicastAddress},
 		{"192.0.2.100", errorBlackListedAddress},
